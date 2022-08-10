@@ -1,3 +1,11 @@
+Technology used: React, React Router, Redux
+
+The app includes three major functions: display, search, and order. (1) The home page displays products, and a user can be directed to a product detail page by clicking a product picture. (2) The user can be directed to the search result page when she has clicked the search input. (3) When a user has logged in, she can place orders and then be directed to the order page.
+
+There are two component files in the src file: components and containers. The components file contains global UI components like loading, error alerts, header, and footer. The containers file contains container components. Inside each container component file (e.g. Home), there are special UI components.
+
+The Redux structure is the 'duck' structure. The src/redux file contains the middleware file and the modules file. Each module contains all the relevant actions，action types，reducers，and selectors.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
