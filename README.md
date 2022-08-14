@@ -4,7 +4,9 @@ The app includes three major functions: display, search, and order. (1) The home
 
 There are two component files in the src file: components and containers. The components file contains global UI components like loading, error alerts, header, and footer. The containers file contains container components. Inside each container component file (e.g. Home), there are special UI components.
 
-The Redux structure is the 'duck' structure. The src/redux file contains the middleware file and the modules file. Each module contains all the relevant actions，action types，reducers，and selectors.
+The Redux structure is the 'ducks' structure. The src/redux file contains the middleware file and the modules file. Each module contains all the relevant actions，action types，reducers，and selectors.
+
+State includes 3 sub-states: entity states(products, shops, orders, and comments), UI states (Is a checkbox checked? input box info, loading status), and general states (whether logged in, error messages). Container components can use UI states and general states directly. Container components use entity states through UI states after some calculation has been done.
 
 # Getting Started with Create React App
 
