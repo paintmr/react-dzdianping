@@ -8,6 +8,10 @@ The Redux structure is the 'ducks' structure. The src/redux file contains the mi
 
 State includes 3 sub-states: entity states(products, shops, orders, and comments), UI states (Is a checkbox checked? input box info, loading status), and general states (whether logged in, error messages). Container components can use UI states and general states directly. Container components use entity states through UI states after some calculation has been done.
 
+Using src/utils/request.js to deal with requests, data responded from the server, and error messages.
+
+Using src/utils/url.js to deal with URLs.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
