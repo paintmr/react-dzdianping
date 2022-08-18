@@ -8,9 +8,13 @@ The Redux structure is the 'ducks' structure. The src/redux file contains the mi
 
 State includes 3 sub-states: entity states(products, shops, orders, and comments), UI states (Is a checkbox checked? input box info, loading status), and general states (whether logged in, error messages). Container components can use UI states and general states directly. Container components use entity states through UI states after some calculation has been done.
 
-Using src/utils/request.js to deal with requests, data responded from the server, and error messages.
+Use src/utils/request.js to deal with requests, data responded from the server, and error messages.
 
-Using src/utils/url.js to deal with URLs.
+Use src/utils/url.js to deal with URLs.
+
+Use src/redux/middleware/api.js as a middleware to handle actions containing the 'FETCH_DATA' mark. This file can avoid redundant code. Many UI components will dispatch similar actions (requestType, successType, failureType) to get data from the server. The file src/redux/middleware/api.js abstract these actions, so different UI components making requests can share this file of code and redundant code can be avoided.
+
+src/components/ErrorToast/index.js is the UI component to display an error. src/redux/modules/app.js contains the state, types, actions, reducer, and selectors for errors. src/containers/App/index.js is the container component for errors that conncect the UI component and the state.
 
 # Getting Started with Create React App
 
